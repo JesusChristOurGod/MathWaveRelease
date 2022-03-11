@@ -127,7 +127,7 @@ int verts = 4;
 // "random" start point (mid point)
   if (currentDepth == 0) {
     
-    point (currentPoint.x, 245.0/600*shapeSize+currentPoint.y, 260.0/600*shapeSize+currentPoint.z);
+    point (currentPoint.x-150.0/600*shapeSize, 245.0/1700*shapeSize+currentPoint.y, 260.0/1700*shapeSize+currentPoint.z);
     
     return;
   }
