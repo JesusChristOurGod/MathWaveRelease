@@ -80,12 +80,12 @@ shape2.display();
     stars[i].update();
     stars[i].show();
   } 
-if (recording){
-  saveFrame("render/output_####.png");
+//if (recording){
+//  saveFrame("render/output_####.png");
   
-  frames++;
-  println(frames/60 + "seconds recorded");
-}
+//  frames++;
+//  println(frames/60 + "seconds recorded");
+//}
 }
 
 void mouseClicked(){
