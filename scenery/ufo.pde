@@ -1,8 +1,8 @@
 class UFO {
   float s; //size of ufo
   float shapeX; 
-  float shapeY = 45; 
-  float shapeZ = 370;
+  float shapeY = 30; 
+  float shapeZ = 420;
   ArrayList<Engine> engines1 = new ArrayList<Engine>();
   float amplitude = 2; //length between two circles of engine
   float len = 200; // len of engine trace

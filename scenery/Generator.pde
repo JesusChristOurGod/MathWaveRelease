@@ -20,13 +20,13 @@ class Randomizer {
   
     GrafOBJ generate() {
     
-     if(randShape == -1) randShape = int(random(0,28));
+     if(randShape == -1) randShape = int(random(0,30));
      else {
        side = 1;
        col = 5;
        int rs = randShape;
        while(rs == randShape) {
-         randShape = int(random(0,28));
+         randShape = int(random(0,30));
        }
      
      }
@@ -98,8 +98,12 @@ class Randomizer {
     case 26:
       return Generator.generate(new MaurerRose(), side*300, -150, 10, 60, 0.1, 200, 0.1, 70, color(colors[col],100,100), 0, 0, 0, 0, 0.008, 0.002);
     case 27:
-      return Generator.generate(new LGBT(), side*300, -150, 10, 60, 0.1, 200, 0.1, 100, color(colors[col],100,100), 0, 0, 0, 0, 0.008, 0.002);
-
+      return Generator.generate(new LGBT(), side*300, -170, 10, 60, 0.1, 200, 0.1, 120, color(colors[col],100,100), 0, 0, 0, 0, 0.008, 0.002);
+    case 28:
+      return Generator.generate(new SuperShape2(), side*300, -150, 10, 60, 0.1, 200, 0.1, 70, color(colors[col],100,100), 0, 0, 0, 0, 0.008, 0.002);
+    case 29:
+      return Generator.generate(new SuperShape3(), side*300, -150, 10, 60, 0.1, 200, 0.1, 65, color(colors[col],100,100), 0, 0, 0, 0, 0.008, 0.002);
+   
     default:
       return null;
      }
