@@ -96,7 +96,7 @@ class HavaNagila implements GrafOBJ{
   strokeWeight(4);
   stroke(shapeColor);
    pushMatrix();
-    translate(xShape,yShape, zShape);
+    translate(xShape+shapeMovementVelocity,yShape, zShape);
     rotateX(xRotation);
     rotateY(yRotation);
     rotateZ(zRotation);

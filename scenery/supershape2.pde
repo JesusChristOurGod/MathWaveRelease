@@ -130,7 +130,7 @@ beginShape();
     float y = shapeSize * r * sin(angle);
     float z = 0;
 
-    vertex(x, y+shapeMovementVelocity, z);
+    vertex(x+shapeMovementVelocity, y, z);
   }
 endShape();
 popMatrix();

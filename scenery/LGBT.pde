@@ -103,7 +103,7 @@ class LGBT implements GrafOBJ{
   strokeWeight(10);
   stroke(shapeColor);
    pushMatrix();
-    translate(xShape,yShape, zShape);
+    translate(xShape+shapeMovementVelocity,yShape, zShape);
     rotateX(xRotation);
     rotateY(yRotation);
     rotateZ(zRotation);

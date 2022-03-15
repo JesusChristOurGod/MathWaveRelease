@@ -100,7 +100,7 @@ class SerpTriangle implements GrafOBJ{
     strokeWeight(1);
     
     pushMatrix();
-    translate(xShape,yShape, zShape);
+    translate(xShape+shapeMovementVelocity,yShape, zShape);
     rotateX(xRotation);
     rotateY(yRotation);
     rotateZ(zRotation);

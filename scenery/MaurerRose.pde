@@ -98,7 +98,7 @@ class MaurerRose implements GrafOBJ{
   strokeWeight(1);
   stroke(shapeColor);
    pushMatrix();
-    translate(xShape,yShape, zShape);
+    translate(xShape+shapeMovementVelocity,yShape, zShape);
     rotateX(xRotation);
     rotateY(yRotation);
     rotateZ(zRotation);
