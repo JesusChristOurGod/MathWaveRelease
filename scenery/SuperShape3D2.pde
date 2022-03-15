@@ -115,7 +115,7 @@ strokeWeight(0.3);
 noFill();
  
 pushMatrix();
-translate(xShape,yShape, zShape); 
+translate(xShape+shapeMovementVelocity,yShape, zShape); 
 rotateX(xRotation);
 rotateY(yRotation);
 rotateZ(zRotation);

@@ -69,7 +69,6 @@ if (shapeMovementCount==-shapeMovementAmplitude){
   shapeMovementDirection =true;
 }
 
-
 //calculating shrinking behaviour
 if (shapeShrinkingDirection==true){
     shapeShrinkingVelocity+=shapeShrinkingAcceleration;
@@ -102,7 +101,7 @@ noFill();
 strokeWeight(4);
 
 pushMatrix();
-translate(xShape,yShape, zShape);
+translate(xShape ,yShape, zShape);
 rotateX(xRotation);
 rotateY(yRotation);
 rotateZ(zRotation);

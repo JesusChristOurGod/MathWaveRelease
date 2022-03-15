@@ -96,7 +96,7 @@ class StrangeHedron3 implements GrafOBJ{
   strokeWeight(2.5);
   stroke(shapeColor);
    pushMatrix();
-    translate(xShape,yShape, zShape);
+    translate(xShape+shapeMovementVelocity,yShape, zShape);
     rotateX(xRotation);
     rotateY(yRotation);
     rotateZ(zRotation);

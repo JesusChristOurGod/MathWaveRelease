@@ -113,7 +113,7 @@ class Sponge implements GrafOBJ{
   stroke((colors[5]+120)%360,100,100);
   strokeWeight(1);
    pushMatrix();
-    translate(xShape,yShape, zShape);
+    translate(xShape+shapeMovementVelocity,yShape, zShape);
     rotateX(xRotation);
     rotateY(yRotation);
     rotateZ(zRotation);

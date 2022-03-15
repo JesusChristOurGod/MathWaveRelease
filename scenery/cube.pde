@@ -74,47 +74,47 @@ class Cube implements GrafOBJ{
     stroke(shapeColor);
     strokeWeight(4);
     pushMatrix();
-    translate(xShape, yShape+shapeMovementVelocity, zShape);
+    translate(xShape+shapeMovementVelocity, yShape, zShape);
     rotateZ(zRotation);
     rotateX(xRotation);
     rotateY(yRotation);
     beginShape(LINES);
 
-      vertex(-shapeSize, -shapeSize+shapeMovementVelocity, shapeSize);
-      vertex(shapeSize, -shapeSize+shapeMovementVelocity ,shapeSize);
+      vertex(-shapeSize, -shapeSize, shapeSize);
+      vertex(shapeSize, -shapeSize,shapeSize);
       
-      vertex(shapeSize,shapeSize+shapeMovementVelocity,shapeSize);
-      vertex(-shapeSize, shapeSize+shapeMovementVelocity, shapeSize);
+      vertex(shapeSize,shapeSize,shapeSize);
+      vertex(-shapeSize, shapeSize, shapeSize);
       
-      vertex(-shapeSize, shapeSize+shapeMovementVelocity,-shapeSize);
-      vertex(shapeSize,shapeSize+shapeMovementVelocity,-shapeSize);
+      vertex(-shapeSize, shapeSize,-shapeSize);
+      vertex(shapeSize,shapeSize,-shapeSize);
       
-      vertex(shapeSize, -shapeSize+shapeMovementVelocity, -shapeSize);
-      vertex(-shapeSize, -shapeSize+shapeMovementVelocity, -shapeSize);
+      vertex(shapeSize, -shapeSize, -shapeSize);
+      vertex(-shapeSize, -shapeSize, -shapeSize);
       
-      vertex(-shapeSize,shapeSize+shapeMovementVelocity,shapeSize);
-      vertex(-shapeSize,-shapeSize+shapeMovementVelocity,shapeSize);
+      vertex(-shapeSize,shapeSize,shapeSize);
+      vertex(-shapeSize,-shapeSize,shapeSize);
       
-      vertex (shapeSize,shapeSize+shapeMovementVelocity,shapeSize);
-      vertex(shapeSize,-shapeSize+shapeMovementVelocity,shapeSize);
+      vertex (shapeSize,shapeSize,shapeSize);
+      vertex(shapeSize,-shapeSize,shapeSize);
       
-      vertex(-shapeSize,shapeSize+shapeMovementVelocity,-shapeSize);
-      vertex(-shapeSize,-shapeSize+shapeMovementVelocity,-shapeSize);
+      vertex(-shapeSize,shapeSize,-shapeSize);
+      vertex(-shapeSize,-shapeSize,-shapeSize);
       
-      vertex (shapeSize,shapeSize+shapeMovementVelocity,-shapeSize);
-      vertex(shapeSize,-shapeSize+shapeMovementVelocity,-shapeSize);
+      vertex (shapeSize,shapeSize,-shapeSize);
+      vertex(shapeSize,-shapeSize,-shapeSize);
       
-      vertex(-shapeSize,shapeSize+shapeMovementVelocity,shapeSize);
-      vertex(-shapeSize,shapeSize+shapeMovementVelocity,-shapeSize);
+      vertex(-shapeSize,shapeSize,shapeSize);
+      vertex(-shapeSize,shapeSize,-shapeSize);
       
-      vertex(shapeSize,shapeSize+shapeMovementVelocity,shapeSize);
-      vertex(shapeSize,shapeSize+shapeMovementVelocity,-shapeSize);
+      vertex(shapeSize,shapeSize,shapeSize);
+      vertex(shapeSize,shapeSize,-shapeSize);
       
-      vertex(-shapeSize,-shapeSize+shapeMovementVelocity,shapeSize);
-      vertex(-shapeSize,-shapeSize+shapeMovementVelocity,-shapeSize);
+      vertex(-shapeSize,-shapeSize,shapeSize);
+      vertex(-shapeSize,-shapeSize,-shapeSize);
       
-      vertex(shapeSize,-shapeSize+shapeMovementVelocity,shapeSize);
-      vertex(shapeSize,-shapeSize+shapeMovementVelocity,-shapeSize);
+      vertex(shapeSize,-shapeSize,shapeSize);
+      vertex(shapeSize,-shapeSize,-shapeSize);
 
     endShape();
     popMatrix();

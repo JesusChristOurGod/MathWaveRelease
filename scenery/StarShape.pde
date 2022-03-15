@@ -98,7 +98,7 @@ class StarShape implements GrafOBJ{
     
     pushMatrix();
     
-    translate(xShape,yShape, zShape);
+    translate(xShape+shapeMovementVelocity,yShape, zShape);
     rotateX(xRotation);
     rotateY(yRotation);
     rotateZ(zRotation);
