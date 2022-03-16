@@ -114,5 +114,7 @@ class MaurerRose implements GrafOBJ{
     }
     endShape();
    popMatrix();
+   strokeWeight(4);
+
   }
 }

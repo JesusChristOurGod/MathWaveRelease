@@ -110,6 +110,7 @@ class SerpTriangle implements GrafOBJ{
     //actually drawing the shape
     sierpinski(startPoint, depth);
     popMatrix();
+    strokeWeight(4);
   }
   void sierpinski(PVector currentPoint, int currentDepth)
 {

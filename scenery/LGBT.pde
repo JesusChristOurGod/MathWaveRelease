@@ -122,6 +122,6 @@ class LGBT implements GrafOBJ{
     
   }
   popMatrix();
-  strokeWeight(1);
+  strokeWeight(4);
 }
 }
