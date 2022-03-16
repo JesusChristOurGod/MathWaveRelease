@@ -103,5 +103,7 @@ class Sphere implements GrafOBJ{
     sphereDetail(15);
     sphere(shapeSize+shapeShrinkingVelocity);
    popMatrix();
+   strokeWeight(4);
+
   }
 }

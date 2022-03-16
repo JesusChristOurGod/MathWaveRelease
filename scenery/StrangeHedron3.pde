@@ -103,5 +103,7 @@ class StrangeHedron3 implements GrafOBJ{
     sphereDetail(5);
     sphere(shapeSize+shapeShrinkingVelocity);
    popMatrix();
+   strokeWeight(4);
+
   }
 }
