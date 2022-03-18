@@ -41,6 +41,7 @@ class Terrain {
 
   void display() {
     stroke(strokeColor);
+    strokeWeight(2);
     fill(terrainColor);
    
     pushMatrix();

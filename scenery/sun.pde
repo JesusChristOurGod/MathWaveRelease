@@ -9,14 +9,39 @@ class Sun {
   boolean direction;
   color from = color(0, 0, 0);
   color to = color(255, 255, 255);
+  PImage s = loadImage("data/SunPNG.png");
 
   Sun() {
+  s.loadPixels();
+     for(int x = 0; x < s.width; x++){
+       for(int y = 0; y < s.height; y++){
+         if(alpha(s.get(x,y)) != 0){
+             int loc = x + y * s.width;
+             s.pixels[loc] = color(map(y,s.height, -s.height, colors[4], colors[5]), 100, 100);
+         }
+       
+       }
+     
+     }
+     s.updatePixels();
   
   }
   
   Sun(color from, color to) {
     this.from = from;
     this.to = to;
+    s.loadPixels();
+     for(int x = 0; x < s.width; x++){
+       for(int y = 0; y < s.height; y++){
+         if(alpha(s.get(x,y)) != 0){
+             int loc = x + y * s.width;
+             s.pixels[loc] = color(map(y,s.height, -s.height, colors[4], colors[5]), 100, 100);
+         }
+       
+       }
+     
+     }
+     s.updatePixels();
   }
   
   void calculating() {
@@ -37,17 +62,9 @@ class Sun {
    }
    
    void display() {
-    noFill();
-    stroke(1.8* map(8, 0, 17, 0,255),0.6 *map(8, 0, 17, 0,255),1.1*map(8, 0, 17, 0,255));
-    circle(centerX, centerY+sunVelocity,  radius*2);
-    for (int i =0; i<18; i=i+1) {
-      angle+=PI/18;
-      float lineLen = 2*radius*sin(angle/2);
-      float lineHeight = sqrt(radius*radius-(lineLen/2)*(lineLen/2));
-      strokeWeight(1);
-      stroke(1.8* map(i, 0, 17, 0,255),0.6 *map(i, 0, 17, 0,255),1.1*map(i, 0, 17, 0,255));
-      line(-lineLen/2, lineHeight+sunVelocity, lineLen/2, lineHeight+sunVelocity);
-      line(-lineLen/2, -lineHeight+sunVelocity, lineLen/2, -lineHeight+sunVelocity);
-    }
+     
+     
+      image(s, -150,-200, 300,300);
+    
    }
 }
