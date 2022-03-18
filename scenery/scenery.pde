@@ -1,4 +1,5 @@
 //test
+
 Sun sun;
 GrafOBJ shape1;
 GrafOBJ shape2;
@@ -55,8 +56,7 @@ void draw(){
   
   //calculating for shape
 
-  //drawing sun
-  sun.display();
+  
   //drawing terrain
   terrain.display();
   //drawing shape
@@ -71,6 +71,8 @@ shape1.display();
 
 shape2.calculating();
 shape2.display();
+//drawing sun
+  sun.display();
   
 
   
