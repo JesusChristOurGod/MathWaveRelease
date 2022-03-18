@@ -53,6 +53,10 @@ void draw(){
     //preparing the screen
   //background(backgroundColor);
   sky.display();
+  for (int i = 0; i < stars.length; i++) {
+    stars[i].update();
+    stars[i].show();
+  } 
   
   //calculating for shape
 
@@ -78,10 +82,7 @@ shape2.display();
   
   
   //drawing stars
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].update();
-    stars[i].show();
-  } 
+  
 //if (recording){
 //  saveFrame("render/output_####.png");
   

@@ -93,7 +93,7 @@ class Merkaba implements GrafOBJ{
   }
   
    void display(){
-    stroke((shapeColor+120)%360,100,100);
+    stroke((colors[5]+120)%360,100,100);
     strokeWeight(4);
     
     pushMatrix();
