@@ -26,7 +26,7 @@ class Craft {
 
   float s;
   float shapeX; 
-  float shapeY = 45; 
+  float shapeY = 35; 
   float shapeZ = 370;
   ArrayList<Engine> engines1 = new ArrayList<Engine>();
   ArrayList<Engine> engines2 = new ArrayList<Engine>();
@@ -70,7 +70,7 @@ class Craft {
      rotateX(-PI/50);
      rotateZ(-sin(angle/20)/2);
     translate(-shapeX, -shapeY, -shapeZ);
-    stroke(color(178,100,100));
+    stroke((colors[3]+120)%360,100,100);
     strokeWeight(4);
     noFill();
     pushMatrix();
@@ -105,7 +105,7 @@ class Craft {
     popMatrix();
     
     //engine 1
-    stroke(color(322,100,100));
+    stroke(colors[3],100,100);
     strokeWeight(2);
     ArrayList<Engine> found = new ArrayList<Engine>();
     for(Engine engine: engines1) {
@@ -113,7 +113,7 @@ class Craft {
       pushMatrix();
       translate(engine.x, engine.y, engine.z);
       
-      circle(0,0, 40*s);
+      circle(0,0, 30*s);
       popMatrix();
       if(engine.z - shapeZ - 100*s > len ) {
         found.add(engine);
@@ -126,7 +126,7 @@ class Craft {
       engine.z += aceleration;
       pushMatrix();
       translate(engine.x, engine.y, engine.z);
-      circle(0,0, 40*s);
+      circle(0,0, 30*s);
       popMatrix();
       if(engine.z - shapeZ - 100*s > len) {
         found.add(engine);
