@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Denis
 Sun sun;
 GrafOBJ shape1;
 GrafOBJ shape2;
@@ -8,9 +13,16 @@ Star[] stars = new Star[500];
 Sky sky;
 float[] colors = new float[6];
 color backgroundColor = color(0);
+<<<<<<< HEAD
 boolean recording = false;
 float frames;
 float plane;
+=======
+float frames = 0;
+float plane;
+int folder = 0;
+
+>>>>>>> Denis
 
 void setup(){
   size (960, 720, P3D);
@@ -18,6 +30,10 @@ void setup(){
   setColors();
   //lights();
   frameRate(60);
+<<<<<<< HEAD
+=======
+  folder = Integer.parseInt(args[0]);
+>>>>>>> Denis
   plane=random(1);
   sun = new Sun();
   terrain = new Terrain();
@@ -33,6 +49,11 @@ void setup(){
     stars[i] = new Star();
   }  
   sky = new Sky(colors[0]); 
+<<<<<<< HEAD
+=======
+  
+ 
+>>>>>>> Denis
 }
 
 void draw(){
@@ -62,6 +83,7 @@ void draw(){
   }
   shape1.calculating();
   shape1.display();
+<<<<<<< HEAD
   
   shape2.calculating();
   shape2.display();
@@ -69,12 +91,25 @@ void draw(){
   sun.display();
 //if (recording){
 //  saveFrame("render/output_####.png");
+=======
+>>>>>>> Denis
   
-//  frames++;
-//  println(frames/60 + "seconds recorded");
-//}
+  shape2.calculating();
+  shape2.display();
+  //drawing sun
+  sun.display();
+if (frames < 1800){
+  saveFrame("render"+folder+"/output_####.png");
+  
+  frames++;
 }
+else {
+    exit();
+}
+<<<<<<< HEAD
 
 void mouseClicked(){
   recording = true;
+=======
+>>>>>>> Denis
 }
