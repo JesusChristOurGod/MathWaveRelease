@@ -1,8 +1,9 @@
 #!/bin/bash
 count=$1
+paths=$(pwd)
 for ((i=1;i<$count;i++))
 do
-processing-java --sketch=/Users/denisfadeev/Documents/Processing/projects/MathWaveRelease/scenery --variant=macos-aarch64 --run $i
+processing-java --sketch=$paths/scenery --run $i
 echo render $i is end
 done
 echo "done"
