@@ -22,7 +22,11 @@ void setup(){
   //lights();
   frameRate(60);
 
+  try{
   folder = Integer.parseInt(args[0]);
+  }catch(Exception e){
+    folder = -1;
+  }
 
   plane=random(1);
   sun = new Sun();
@@ -82,12 +86,12 @@ void draw(){
   shape2.display();
   //drawing sun
   sun.display();
-if (frames < 1800){
+if (frames < 1800 && folder!= -1){
   saveFrame("render"+folder+"/output_####.png");
   
   frames++;
 }
-else {
+else if(folder != -1){
     exit();
 }
 }
