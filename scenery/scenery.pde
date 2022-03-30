@@ -1,3 +1,5 @@
+
+
 Sun sun;
 GrafOBJ shape1;
 GrafOBJ shape2;
@@ -8,9 +10,10 @@ Star[] stars = new Star[500];
 Sky sky;
 float[] colors = new float[6];
 color backgroundColor = color(0);
-boolean recording = false;
-float frames;
+float frames = 0;
 float plane;
+int folder = 0;
+
 
 void setup(){
   size (960, 720, P3D);
@@ -18,6 +21,7 @@ void setup(){
   setColors();
   //lights();
   frameRate(60);
+  folder = Integer.parseInt(args[0]);
   plane=random(1);
   sun = new Sun();
   terrain = new Terrain();
@@ -33,6 +37,8 @@ void setup(){
     stars[i] = new Star();
   }  
   sky = new Sky(colors[0]); 
+  
+ 
 }
 
 void draw(){
@@ -67,14 +73,12 @@ void draw(){
   shape2.display();
   //drawing sun
   sun.display();
-//if (recording){
-//  saveFrame("render/output_####.png");
+if (frames < 1800){
+  saveFrame("render"+folder+"/output_####.png");
   
-//  frames++;
-//  println(frames/60 + "seconds recorded");
-//}
+  frames++;
 }
-
-void mouseClicked(){
-  recording = true;
+else {
+    exit();
+}
 }
